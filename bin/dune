@@ -1,0 +1,4 @@
+(executable
+ (public_name lfgo)
+ (name main)
+ (libraries lfgo spices))

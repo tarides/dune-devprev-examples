@@ -1,0 +1,12 @@
+(version 20231231)
+
+(build
+ (run dune build -p %{pkg-self:name} -j %{jobs}))
+
+(depends ocaml dune menhirLib menhirSdk menhirCST)
+
+(source
+ (fetch
+  (url
+   https://gitlab.inria.fr/fpottier/menhir/-/archive/20231231/archive.tar.gz)
+  (checksum md5=799748bc3b7a542798a85956c7863865)))

@@ -1,0 +1,21 @@
+(version 15.1.0)
+
+(build
+ (run
+  ocaml
+  pkg/pkg.ml
+  build
+  --dev-pkg
+  %{pkg-self:dev}
+  --with-uutf
+  %{pkg:uutf:installed}
+  --with-cmdliner
+  %{pkg:cmdliner:installed}))
+
+(depends ocaml ocamlfind ocamlbuild topkg uucp uucp uutf cmdliner)
+
+(source
+ (fetch
+  (url https://erratique.ch/software/uuseg/releases/uuseg-15.1.0.tbz)
+  (checksum
+   sha512=1e9460dc5a856c985d40c61fd1560bdfdb8bbaf8d7430405814589b47d4a7f7869658d1e3198c7a9132412e9b4b85402ceb4bda5040da426b69e9aef4222a23a)))

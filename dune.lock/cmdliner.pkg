@@ -1,0 +1,17 @@
+(version 1.2.0)
+
+(install
+ (progn
+  (run %{make} install LIBDIR=%{pkg-self:lib} DOCDIR=%{pkg-self:doc})
+  (run %{make} install-doc LIBDIR=%{pkg-self:lib} DOCDIR=%{pkg-self:doc})))
+
+(build
+ (run %{make} all PREFIX=%{prefix}))
+
+(depends ocaml)
+
+(source
+ (fetch
+  (url https://erratique.ch/software/cmdliner/releases/cmdliner-1.2.0.tbz)
+  (checksum
+   sha512=6fcd6a59a6fbc6986b1aecdc3e4ce7a0dc43c65a16b427d6caa5504b10b51384f6b0bc703af646b09f5f1caeb6827b37d4480ce350ca8006204c850785f2810b)))
