@@ -19,7 +19,7 @@
  (name lfgo)
  (synopsis "A short synopsis")
  (description "A longer description")
- (depends ocaml dune ocamlformat spices)
+ (depends ocaml dune spices riot)
  (tags
   (topics "to describe" your project)))
 
